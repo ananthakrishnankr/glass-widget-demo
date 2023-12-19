@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Demo app</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+
+    <script
+      defer
+      src="https://unpkg.com/@glass.props/sentient/dist/sentient.umd.min.js"
+    ></script>
+
+    <script>
+      window.sentientOnLoad = function () {
+        console.log("1");
+        Sentient.init({
+          apiKey:
+            "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2ZXJzaW9uIjoxLCJpc3MiOiJzZW50aWVudCIsInN1YiI6ImJvdC10b2tlbiIsImlhdCI6MTcwMjk4MTEzMywianRpIjoiZGY3MmNhMWYtYThmMC00ODAxLWEyZWEtMjdhYTc3ZmYwY2Q0In0.ScrDzvgfvrpZgmGYO2VTzmNRJFDjt8mWicfmcTb5ar4",
+        });
+      };
+    </script>
+  </head>
+
+  <body>
+    <div class="topnav">
+      <h1 class="logo">LOREM IPSUM</h1>
+      <div class="menu">
+        <div class="menu-list">
+          <a class="active" href="#home">Home</a>
+          <a href="#contact">Contact</a>
+          <a href="#about">About</a>
+        </div>
+        <div id="toggle" class="dark-mode-toggle">
+          <i class="material-icons">dark_mode</i>
+        </div>
+      </div>
+    </div>
+    <div class="first-section">
+      <div class="first-content">
+        <h6>DEMO PAGE TO TEST GLASS WIDGET</h6>
+        <h2>LOREM IPSUM</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <button>LOREM IPSUM</button>
+      </div>
+    </div>
+    <div class="second-section">
+      <div class="second-content">
+        <h6>DEMO PAGE TO TEST GLASS WIDGET</h6>
+        <h4>Sed do eiusmod tempor incididunt ut labore et dolore</h4>
+        <p>
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
+          ab illo inventore veritatis et quasi architecto beatae vitae dicta
+          sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+          aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos
+          qui ratione voluptatem sequi nesciunt.
+        </p>
+        <p class="mobile-hide">
+          Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+          consectetur, adipisci velit. Ut enim ad minima veniam, quis nostrum
+          exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex
+          ea commodi consequatur?
+        </p>
+        <button>LOREM IPSUM</button>
+      </div>
+      <img src="https://placehold.co/500x350.png" />
+    </div>
+    <div class="footer">
+      <p>Demo page to test Glass Widget.</p>
+    </div>
+  </body>
+
+  <script>
+    let isDarkMode = false;
+
+    document.getElementById("toggle").addEventListener("click", (e) => {
+      if (isDarkMode) {
+        document.documentElement.setAttribute("data-theme", "light");
+      } else {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+      isDarkMode = !isDarkMode;
+    });
+  </script>
+</html>
